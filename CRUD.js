@@ -1,3 +1,5 @@
+//Wurde mit Hilfe con ChatGPT korrigiert und angepasst
+//Wurde mit Hilfe von BingAI korrigiert und angepasst
 function addQuote() {
   var quoteInput = document.getElementById("quoteInput").value;
   
