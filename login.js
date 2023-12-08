@@ -3,6 +3,14 @@ function loginAndShowApp() {
   const password = document.getElementById("password").value;
 
   const dockerAuthUrl = "http://localhost:2941/auth/login";
+  if (username == "") {
+    alert("Sie sollten etwas eingeben!");
+    return;
+  }
+  if (password == "") {
+    alert("Sie sollten etwas eingeben!");
+    return;
+  }
 
   fetch(dockerAuthUrl, {
     method: "POST",
