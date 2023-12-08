@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotenverwaltung</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="CRUD.js"></script>
+    <script src="login.js"></script>
+    <style></style>
+  </head>
+  <body onload="hideAddQuoteFormOnLoad()">
+    <header>Quotenspiel</header>
+
+    <nav id="mainNav">
+      <ul>
+        <li>
+          <a href="#quotenspiel" onclick="showPage('quotenspiel')"
+            >Quotenspiel</a
+          >
+        </li>
+        <li><a href="#infos" onclick="showPage('infos')">Infos</a></li>
+        <li><a href="#kontakte" onclick="showPage('kontakte')">Kontakte</a></li>
+      </ul>
+    </nav>
+
+    <!-- Seiteninhalte -->
+    <div id="quotenspiel" class="page" style="display: none">
+      <form id="addQuoteForm" style="display: none">
+        <label for="quoteInput">Neue Quote hinzufügen:</label>
+        <input type="text" id="quoteInput" required />
+        <button type="button" onclick="addQuote()" class="disable-on-login">
+          Hinzufügen
+        </button>
+      </form>
+
+      <ul id="quoteList"></ul>
+    </div>
+
+    <div id="infos" class="page" style="display: none">
+      <p>Diese Seite wurde mit html, css und js gemacht.</p>
+    </div>
+
+    <div id="kontakte" class="page" style="display: none">
+      <p>E-Mail: l.lai.inf22@stud.bbbaden.ch</p>
+    </div>
+
+    <div id="loadingOverlay" style="display: none">
+      <p>Loading...</p>
+    </div>
+
+    <div id="loginFormContainer" class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="button" onclick="loginAndShowApp()">Login</button>
+
+        <div id="wrongPasswordLabel" style="display: none">
+          Warnung: Benutzername oder Passwort falsch!
+        </div>
+      </form>
+    </div>
+
+    <!-- Das Formular zum Hinzufügen von Zitaten wird beim Laden der Seite versteckt -->
+
+    <footer>Lorenzo Lai - M294</footer>
+  </body>
+</html>
