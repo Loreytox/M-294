@@ -1,3 +1,6 @@
+//Wurde mit Hilfe con ChatGPT korrigiert und angepasst
+//Wurde mit Hilfe von BingAI korrigiert und angepasst
+//Wurde mit Hilfe von Marek von Rogall korrigiert und angepasst
 function loginAndShowApp() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
