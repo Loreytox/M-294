@@ -1,5 +1,11 @@
 function addQuote() {
   var quoteInput = document.getElementById("quoteInput").value;
+  
+  // Validierung des Inputs vor dem Senden der Anfrage
+  if (quoteInput == "") {
+    alert("Sie sollten etwas eingeben!");
+    return;
+  }
 
   fetch("http://localhost:2940/api/v1/entities/", {
     method: "POST",
